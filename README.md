@@ -1,6 +1,6 @@
 # netbox-sso-saml
 
-The configuration and files that are needed to create SSO with SAML.
+The configuration and files that are needed to create SSO with SAML for AzureAD.
 All credits go to billylebegue
 
 See link:
