@@ -16,7 +16,7 @@ def set_role(response, user, backend, *args, **kwargs):
         user.is_staff = False
 
         for role in roles:
-            if role == 'Group Network Admins':
+            if role == 'group-admins':
                 user.is_superuser = True
                 user.save()
                 user.is_staff = True
