@@ -20,7 +20,7 @@ Go to location of netbox folder (/opt/netbox/) and add in local_requirements.txt
 
 ## Step 3: Dependancies install
 Install the linux dependancies for xmlsec1 
-apt install xmlsec1
+- apt install xmlsec1
 
 ## Step 4: Add code to configuration.py
 Go to the location of netbox folder (opt/netbox/netbox/netbox)
