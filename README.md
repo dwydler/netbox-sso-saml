@@ -18,9 +18,9 @@ Go to location of netbox folder (/opt/netbox/) and add in local_requirements.txt
 - python3-saml
 - onelogin
 
-## Step 3: Dependancies install
+## Step 3: Dependancies install (because xmlsec in pip is broken i had luck with these below)
 Install the linux dependancies for xmlsec1 
-- apt install xmlsec1
+- apt install xmlsec1 xmlsec1-devel xmlsec1-openssl-devel libtool-ltdl-devel libxml2-devel libxmlsec1-dev libxmlsec1-openssl pkg-config
 
 ## Step 4: Add code to configuration.py
 Go to the location of netbox folder (opt/netbox/netbox/netbox)
