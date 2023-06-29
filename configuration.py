@@ -38,3 +38,18 @@ SOCIAL_AUTH_SAML_EXTRA_DATA = [("http://schemas.microsoft.com/ws/2008/06/identit
 # SOCIAL_AUTH_SAML_SECURITY_CONFIG = {"requestedAuthnContext": False}
 # SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 
+SOCIAL_AUTH_PIPELINE = (
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    'social_core.pipeline.social_auth.associate_by_email',
+    'social_core.pipeline.user.create_user',
+    'social_core.pipeline.social_auth.associate_user',
+    'netbox.authentication.user_default_groups_handler',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+    'netbox.samlgetgroups.set_role',
+)
+
+
