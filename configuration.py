@@ -35,8 +35,8 @@ SOCIAL_AUTH_SAML_ENABLED_IDPS = {
 }
 REMOTE_AUTH_AUTO_CREATE_USER = True
 SOCIAL_AUTH_SAML_EXTRA_DATA = [("http://schemas.microsoft.com/ws/2008/06/identity/claims/groups", "groups")]
-# SOCIAL_AUTH_SAML_SECURITY_CONFIG = {"requestedAuthnContext": False}
-# SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
+SOCIAL_AUTH_SAML_SECURITY_CONFIG = {"requestedAuthnContext": False}
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 
 SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_details',
