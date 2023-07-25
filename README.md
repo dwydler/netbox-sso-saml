@@ -34,6 +34,9 @@ Paste the content from configuration.py in file and edit the values to match you
 
 ## Step 5: Create file samlgetgroup.py
 Create the file in the same location as configuration.py, paste the content in the file and save.
+Change the group-admins to the name you use for admin group. Everything else is added as readonly afterwards in netbox you can change permissions as well.
+
+Make sure you bind the groups in Azure to the azure SSO app specified for netbox.
 
 ## Step 6: Run ./upgrade of update docker
 Run the file upgrade.sh (./upgrade.sh) located in /opt/netbox/ or rebuild the docker to get the new modules loaded.
