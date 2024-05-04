@@ -6,7 +6,7 @@ class AuthFailed(Exception):
 def set_role(response, user, backend, *args, **kwargs):
     try:
         conndetails = user.social_auth.get(provider='saml')
-        roles = conndetails.extra_data['groups']
+        roles = conndetails.extra_data['Group']
     except KeyError:
         user.groups.clear()
         raise AuthFailed("No role assigned")
@@ -16,7 +16,7 @@ def set_role(response, user, backend, *args, **kwargs):
         user.is_staff = False
 
         for role in roles:
-            if role == 'group-admins':
+            if role == 'administrators':
                 user.is_superuser = True
                 user.save()
                 user.is_staff = True
