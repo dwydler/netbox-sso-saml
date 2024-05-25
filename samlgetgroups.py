@@ -1,4 +1,4 @@
-from django.contrib.auth.models import Group
+from netbox.authentication import Group
 
 class AuthFailed(Exception):
         pass
@@ -28,7 +28,8 @@ def set_role(response, user, backend, *args, **kwargs):
                 user.save()
 
         group, created = Group.objects.get_or_create(name=role)
-        group.user_set.add(user)
+        user.groups.add(group)
+
     except Group.DoesNotExist:
         pass
-
+        

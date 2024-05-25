@@ -1,3 +1,3 @@
-typing-extensions==4.4
+typing-extensions==4.5
 onelogin
 python3-saml
