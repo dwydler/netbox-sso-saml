@@ -1,3 +1,8 @@
+# The view name or URL to which users are redirected after logging out.
+LOGOUT_REDIRECT_URL = 'https://login.lab03.daniel.wydler.eu/adfs/ls/?wa=wsignout1.0'
+
+...
+
 # Remote authentication support
 EMOTE_AUTH_ENABLED = True
 REMOTE_AUTH_BACKEND = 'social_core.backends.saml.SAMLAuth'
